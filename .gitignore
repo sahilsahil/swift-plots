@@ -1,3 +1,14 @@
 *.bin
+*.dat
+*.in
+*.log
+*.out
 *.png
+*.state.lua
+!15yr.state.lua
+
 fort.*
+state-temp.lua
+
+swift_symba5_laser_standon
+gnuplot.lua
