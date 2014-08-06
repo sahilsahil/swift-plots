@@ -10,7 +10,7 @@ inputs.state = dofile("15yr.state.lua")
 inputs.ast_diam = 325
 
 -- force to use (N)
-inputs.force = 6
+inputs.force = 4
 
 -- list of times for laser to run (years)
-inputs.times = {2, 5, 7.5, 10, 12.5, 15, 17.5, 20, 25}
+inputs.times = {0.5, 3, 7.5, 10, 12.5, 15, 17.5, 20, 25, 30}

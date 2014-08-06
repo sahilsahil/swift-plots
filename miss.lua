@@ -39,7 +39,7 @@ end
 -- compute miss distance from numerical results
 function miss.find (data_file, substeps)
 	if not substeps then
-		substeps = 100000
+		substeps = 1000000
 	end
 	
 	local file = io.open(data_file, "r")

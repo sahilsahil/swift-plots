@@ -13,4 +13,4 @@ inputs.ast_diam = 200
 inputs.force = 12
 
 -- list of times for laser to run (years)
-inputs.times = {1, 1.5, 2, 2.5, 3, 4, 5, 7}
+inputs.times = {0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 7}

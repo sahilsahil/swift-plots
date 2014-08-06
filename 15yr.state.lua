@@ -15,8 +15,8 @@ state.asteroid.pos = { -- initial position (au)
 	 0.0000000000000000e+00  -- z
 }
 state.asteroid.vel = { -- initial velocity (au/year)
-	 6.6619537594175622e+00, -- v_x
-	-2.5576186179447191e+00, -- v_y
+	 6.6619540772373140e+00, -- v_x
+	-2.5576187399602337e+00, -- v_y
 	 0.0000000000000000e+00  -- v_z
 }
 
