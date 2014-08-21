@@ -13,4 +13,5 @@ Dependencies
 
 * lua-gnuplot (>= 0.2)
 
-* SWIFT library with "swift_symba5_laser_standon" (>= 2014-07-09-1)
+* SWIFT library with "swift_symba5_laser_standon"
+  and "swift_symba5_laser_standon_angle" (>= 2014-08-20-1)

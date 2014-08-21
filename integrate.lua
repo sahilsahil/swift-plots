@@ -134,4 +134,19 @@ function integrate.create_run (force_N, radius_km, is_antiparallel)
 	
 end
 
+-- create run.in with custom angles
+function integrate.create_run_ang (force_N, radius_km, angle_a, angle_b)
+	
+	-- text of run.in
+	local run_str = string.format(
+		"param.in\npl.in\n1.0e-10\n.true.\n%f\n.true.\n%f\n3\n%f\n%f\n",
+		force_N, radius_km, math.rad(angle_a), math.rad(angle_b))
+	
+	-- create file
+	local run_file = io.open("run.in", "w")
+	run_file:write(run_str)
+	run_file:close()
+	
+end
+
 return integrate

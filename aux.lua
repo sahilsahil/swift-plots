@@ -34,6 +34,34 @@ function aux.min_max_safe (list)
 	return min, max
 end
 
+-- selection sort a set of two lists representing a list of points
+function aux.sort(list_x, list_y)
+	local new_x, new_y = {}, {}
+	
+	while #list_x > 0 do
+		-- find the smallest x in the remaining list
+		local i_min = 1
+		local x_min = list_x[1]
+		for i, x in ipairs(list_x) do
+			if x < x_min then
+				x_min = x
+				i_min = i
+			end
+		end
+		
+		-- move smallest x and corresponding y to new list
+		table.insert(new_x, x_min)
+		table.insert(new_y, list_y[i_min])
+		table.remove(list_x, i_min)
+		table.remove(list_y, i_min)
+	end
+	
+	-- lists are now sorted
+	list_x = new_x
+	list_y = new_y
+	return new_x, new_y
+end
+
 -- convert asteroid diameter (m) to mass (kg)
 function aux.diam_to_mass(diam)
 	return 2000.0 * 4.187743 * (0.5 * diam)^3
@@ -80,6 +108,7 @@ function aux.clean (mode, ext_list)
 				for i, ext in ipairs(ext_list) do
 					os.remove("fort.94_ap_" .. ext)
 					os.remove("fort.94_p_" .. ext)
+					os.remove("fort.94_" .. ext)
 				end
 			end
 		end
